@@ -1,0 +1,381 @@
+﻿<html>
+	
+<head>
+	<title>Cliente</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "ERP_SIF.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Cliente");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Cliente</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="DatosMaestros.html">Datos Maestros</a> &rsaquo;&rsaquo; <a href="Clientes.html">Clientes</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Clientes.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Clientes.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Sector.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts11">Cliente</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">El sistema, en su modulo de facturación centra sus movimientos sobre los clientes, los clientes son las figuras sobre las cuales se generan las facturas, las notas de crédito, la notas de débito, reportes, estadísticas y en general la información de ventas.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Los Datos Maestros de los Clientes están agrupados en 3 grupos o pestañas: </span><span class="rvts33">Info. General, Referencias y Documentos</span><span class="rvts17">, la tercer pestaña no es mas que un listado de los clientes existentes en el sistema.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Ruta de acceso: </span><span class="rvts33">Menú Principal</span><span class="rvts17"> &lt;-- Pestaña </span><span class="rvts33">Catálogos</span><span class="rvts17"> &lt;-- Grupo </span><span class="rvts33">Clientes &lt;-- Cliente</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem90.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" src="lib/libTable3.png"><span class="rvts17">La información básica para cada registro en el grupo de </span><span class="rvts33">Info. General </span><span class="rvts17">consiste en:</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<div class="rvps2"><table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Nombre Campo</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tipo de Dato</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tamaño</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Nombre</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">255</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Dirección</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">255</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">NIT</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">255</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">DPI</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">50</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17"># Contador (Numero Contador)</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">50</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Teléfono 1</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">25</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Teléfono 2</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">25</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Sector</span></p>
+</td>
+<td colspan="2" width="325" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><a class="rvts18" href="Sector.html">Ver Sector</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Estado</span></p>
+</td>
+<td colspan="2" width="325" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><a class="rvts18" href="EstadodelCliente.html">Ver Estado</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Record</span></p>
+</td>
+<td colspan="2" width="325" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><a class="rvts18" href="RecordCliente.html">Ver Record</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="204" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Fotografía</span></p>
+</td>
+<td width="104" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Imagen</span></p>
+</td>
+<td width="214" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><a class="rvts18" href="ConfiguracionesGenerales1.htm">Ver Configuraciones Generales</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem176.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Crédito (Limites)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Los limites de crédito nos dan un método para establecer un tope razonable y seguro en la cantidad de deuda/crédito que un cliente puede acumular.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">De forma predeterminada cada Cliente nuevo se crea con 0 (Cero) en cada Limite, de este modo no se permitirá usar en una transacción al crédito.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts33">Tipos de limite permitido</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts33">Limite Diario:</span><span class="rvts17"> Limite de compras al Crédito por Día.</span></p>
+<p class="rvps2"><span class="rvts33">Limite Mensual:</span><span class="rvts17"> Limite de compras al Crédito al Mes, esto incluye las del día y por lo tanto debe ser mayor al Limite Diario.</span></p>
+<p class="rvps2"><span class="rvts33">Limite Total:</span><span class="rvts17"> Limite de compras al Crédito Total, esto incluye las del día y las del mes, por lo tanto este limite debe ser mayor que los 2 anteriores.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" src="lib/libTable2.png"><span class="rvts17">La estructura de la información del grupo de datos de Limite de Crédito</span><span class="rvts33"> </span><span class="rvts17">consiste en:</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<div class="rvps2"><table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="126" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Nombre Campo</span></p>
+</td>
+<td width="117" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tipo de Dato</span></p>
+</td>
+<td width="99" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tamaño</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="126" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Diario</span></p>
+</td>
+<td width="117" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Numérico&nbsp;</span></p>
+</td>
+<td width="99" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">(18,2)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="126" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Mensual</span></p>
+</td>
+<td width="117" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Numérico</span></p>
+</td>
+<td width="99" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">(18,2)</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="126" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Total</span></p>
+</td>
+<td width="117" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Numérico</span></p>
+</td>
+<td width="99" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">(18,2)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts33">Nota</span><span class="rvts17">: La deuda o crédito actual en un momento dado es el balance de débitos (Facturas al Crédito, Notas de Débito) y Créditos (Notas de Crédito), esto quiere decir que el limite esta en constante cambio, una Nota de Crédito a favor puede habilitar a un cliente para que pueda volver a facturar.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Ver </span><a class="rvts18" href="Facturas.html">Factura</a></p>
+<p class="rvps2"><span class="rvts17">Ver </span><a class="rvts18" href="NotasdeDebitoCredito.html">Notas de Débito/Crédito</a></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem180.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts33">Advertencia de Limite de Crédito</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Tanto en las Facturas al Crédito como en las Notas de Débito es verificado el Limite de Crédito, si el valor de la Factura/Nota actual mas el total del crédito anterior acumulado excede algún Limite establecido (Diario, Mensual o Total), un mensaje de alerta sera mostrado, en el puede aparecer uno, dos o los tres mensajes en donde indica que limite esta apunto de ser sobrepasado, esto evitara que el documento al crédito sea generado.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem181.png"></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Referencias</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">En los sistemas que están configurados para empresas que tienen ventas al crédito, o que llevan una cartera de Clientes completa el sistema les permite ingresar ilimitadas referencias personales.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts33">Definición</span><span class="rvts17">: Una referencia personal se considera como una persona que puede dar información o fe del Crédito de un Cliente, también podría ser considerado en ciertas ocasiones como la única forma de contactar un cliente cuando este no tiene una dirección exacta.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" src="lib/libTable1.png"><span class="rvts17">La información básica para cada registro en el grupo de </span><span class="rvts33">Referencias </span><span class="rvts17">consiste en:</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<div class="rvps2"><table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Nombre Campo</span></p>
+</td>
+<td width="102" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tipo de Dato</span></p>
+</td>
+<td width="93" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tamaño</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Nombre</span></p>
+</td>
+<td width="102" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="93" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">255</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Dirección</span></p>
+</td>
+<td width="102" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="93" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">255</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">NIT</span></p>
+</td>
+<td width="102" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="93" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">50</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">DPI</span></p>
+</td>
+<td width="102" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="93" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">50</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Teléfono</span></p>
+</td>
+<td width="102" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="93" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">25</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem177.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Documentos</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts17">En los sistemas que están configurados para empresas que tienen ventas al crédito, o que llevan una cartera de Clientes completa el sistema les permite ingresar ilimitadas Documentos Digitales.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Estos documentos pueden representar </span><span class="rvts33">documentos de identificación</span><span class="rvts17">, </span><span class="rvts33">licencias de conducir</span><span class="rvts17">, </span><span class="rvts33">constancias de ingresos</span><span class="rvts17"> y cualquier documento que a la empresa le sirva para verificar la identidad de un cliente.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" src="lib/libTable.png"><span class="rvts17">La información básica para cada registro en el grupo de </span><span class="rvts33">Documentos </span><span class="rvts17">consiste en:</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<div class="rvps2"><table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="128" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Nombre Campo</span></p>
+</td>
+<td width="114" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tipo de Dato</span></p>
+</td>
+<td width="208" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tamaño</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="128" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Archivo</span></p>
+</td>
+<td width="114" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Archivo Binario</span></p>
+</td>
+<td width="208" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><a class="rvts18" href="ConfiguracionesGenerales1.htm">Ver Configuraciones Generales</a></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="128" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Observaciones</span></p>
+</td>
+<td width="114" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="208" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Ilimitado</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="128" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Tipo de Documento</span></p>
+</td>
+<td width="114" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="208" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><a class="rvts18" href="TipodeDocumento.html">Ver Cliente</a></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem178.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Finalmente, en la pestaña/grupo Lista de Clientes se listan los Clientes existentes, estos pueden ser editados dando doble clic sobre ellos.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem179.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Ingreso rápido de Clientes</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Adicional al mantenimiento normal de los clientes, existe un método abreviado de ingreso de clientes, este es usado unicamente desde el ingreso de facturas de ventas, desde este ingreso es obligatorio unicamente el Nombre y NIT del cliente, si un cliente ingresado de esta forma es consultado desde el mantenimiento normal de clientes sera exigida la dirección completando así la información obligatoria.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem106.png"></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p></p>
+<p class="rvps5"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com/create-epub-ebooks">Write EPub books for the iPad</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

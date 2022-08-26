@@ -1,0 +1,174 @@
+﻿<html>
+	
+<head>
+	<title>Compras</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "ERP_SIF.html?" + sTopicUrl;
+			}
+			else
+			{
+				var bTocSelected = false;
+				(function waitForTOC()
+				{
+					if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+					{
+						top.FrameTOC.SelectTocItem("Compras");
+						bTocSelected = true;
+					}
+					if (!bTocSelected) setTimeout(function() { waitForTOC(); }, 300);
+				})();
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Compras</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Transacciones1.html">Transacciones</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Transacciones1.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Transacciones1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="ConsultarCompras.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts11">Compra</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts17">Las Compras tienen el objetivo de ingresar las unidades adquiridas al inventario, y por lo tanto una compra dentro del sistema es un ingreso a la existencia de un producto.</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><span class="rvts17">Ruta de acceso: </span><span class="rvts33">Menú Principal</span><span class="rvts17"> &lt;-- Pestaña Transacciones </span><span class="rvts33">&lt;-- + Compra</span></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNuevo tem6.png"></p>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" src="lib/libTable18.png"><span class="rvts17">Los Datos que se almacenan de cada Compra</span><span class="rvts33"> </span><span class="rvts17">son:</span></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<div class="rvps2"><table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Nombre Campo</span></p>
+</td>
+<td width="174" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tipo de Dato</span></p>
+</td>
+<td width="63" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Tamaño</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps15"><span class="rvts33">Obligatorio</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">NIT</span></p>
+</td>
+<td width="174" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="63" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">255</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Si</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Documento</span></p>
+</td>
+<td width="174" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Texto</span></p>
+</td>
+<td width="63" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">255</span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">No</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" height="22" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Forma de Pago</span></p>
+</td>
+<td colspan="2" width="201" height="22" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><a class="rvts18" href="FormasdePago.html">Ver Formas de Pago</a></p>
+</td>
+<td width="80" height="22" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Si</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Fecha Documento</span></p>
+</td>
+<td width="174" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Fecha</span></p>
+</td>
+<td width="63" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17"><br/></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Si</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Fecha Pago</span></p>
+</td>
+<td width="174" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Fecha</span></p>
+</td>
+<td width="63" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17"><br/></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Si</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="127" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Archivo</span></p>
+</td>
+<td width="174" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">Archivo</span></p>
+</td>
+<td width="63" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17"><br/></span></p>
+</td>
+<td width="80" valign="top" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;"><p class="rvps2"><span class="rvts17">No</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts33"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNuevo tem5.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem92.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem94.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem98.png"></p>
+<p class="rvps2"><span class="rvts17"><br/></span></p>
+<p class="rvps2"><img alt="" src="lib/libNewItem93.png"></p>
+<p></p>
+<p class="rvps5"><span class="rvts15">Created with the Personal Edition of HelpNDoc: </span><a class="rvts16" href="http://www.helpndoc.com">Free HTML Help documentation generator</a></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; &lt;Dates&gt; by &lt;Authors&gt;. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

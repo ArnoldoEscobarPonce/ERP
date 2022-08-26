@@ -1,0 +1,518 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>ERP_SIF- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.9.2.132">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/dynatree/chm/ui.dynatree.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#tabs .ui-widget-header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.dynatree.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		window.bSearchDataLoaded = false;
+		var sHelpIdToActivate = '';
+	
+		$(document).ready(function()
+		{
+			var sAnchorName = '';
+			try { sAnchorName = top.location.href.substring(top.location.href.lastIndexOf("#") + 1, top.location.href.length); }
+			catch(err) { sAnchorName = ''; }
+			var nSelectedTab = 0;
+			if (sAnchorName == '_index') nSelectedTab = 1
+			else if (sAnchorName == '_search') nSelectedTab = 2;			
+			$("#tabs").tabs({
+				selected: nSelectedTab,
+				select: function(event, ui) { HideKwPopup(); }
+			});
+			
+			// Toc
+			if ($("#tab-toc").length) {
+				$("#tab-toc").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#tab-keywords").length && $("#tab-keywords").dynatree && $("#tab-keywords").dynatree("getTree") && $("#tab-keywords").dynatree("getTree").activateKey)
+							$("#tab-keywords").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-toc").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				// Select the active help id
+				if (sHelpIdToActivate != '') $("#tab-toc").dynatree("getTree").activateKey(sHelpIdToActivate);
+			}
+			
+			// Keywords
+			
+			if ($("#tab-keywords").length) {
+				$("#tab-keywords").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onClick: function(node, event){
+						HideKwPopup();
+						if (node.data && node.data.click)
+						{
+							var aRefList = null;
+							eval('aRefList=' + node.data.click);
+							if (ShowKwPopup(node.li, aRefList))
+							{
+								if ($("#tab-toc") && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").activateKey)
+									$("#tab-toc").dynatree("getTree").activateKey(null);
+								if(node.data.href && node.data.href != '#'){
+									window.open(node.data.href, node.data.target);
+								}
+							}
+						}
+					}
+				});
+				// Expand all nodes if required
+				$("#tab-keywords").dynatree("getRoot").visit(function(node){
+						node.expand(true);
+					});
+				}
+			
+			// Load search data
+			(function() {
+				var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+				se.src = 'js/hndsd.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+			})();
+		});
+		
+		$('body').click(function() {
+			HideKwPopup();
+		});
+		
+		function SelectTocItem(sHelpId)
+		{
+			if ($("#tab-toc").length && $("#tab-toc").dynatree && $("#tab-toc").dynatree("getTree") && $("#tab-toc").dynatree("getTree").getNodeByKey) {
+				$("#tab-toc").dynatree("getTree").getNodeByKey(sHelpId).activateSilently();
+			}
+			else {
+				sHelpIdToActivate = sHelpId;
+			}
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				// Close button
+				oLink = document.createElement("SPAN");
+				oLink.className = "close-button";
+				oLink.innerHTML = "X";
+				oLink.href = "#";
+				oLink.onclick = HideKwPopup;
+				oParentDiv.appendChild(oLink);
+				// Items
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			if (!window.bSearchDataLoaded) {
+				$("#search_results").html("Search engine data hasn't been fully loaded yet or an error occurred while loading it. This usually happens when documentation is browsed locally.");
+				return;
+			}
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('<div id="search_results_content"></div>');
+				var oUl = $("#search_results_content").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					if (oSearchEngine.aResults[nCnt][0] < aTl.length)
+					{
+						oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt][0]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt][0]][1]) + "</a></li>");
+					}
+				}
+				// Tree
+				$("#search_results_content").dynatree({
+					clickFolderMode: 1,
+					debugLevel: 0,
+					imagePath: 'css/dynatree/chm/',
+					onActivate: function(node){
+						if ($("#search_results_content") && $("#search_results_content").dynatree && $("#search_results_content").dynatree("getTree") && $("#search_results_content").dynatree("getTree").activateKey)
+							$("#search_results_content").dynatree("getTree").activateKey(null);
+						if(node.data.href && node.data.href != '#'){
+							window.open(node.data.href, node.data.target);
+						}
+					}
+				});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">Contents</a></li>
+			<li><a href="#tab-keywords">Index</a></li>
+			<li><a href="#tab-search">Search</a></li>
+			</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="">
+
+				<li class="" id="Introduccion" data="">
+							<a
+							href="Introduccion.html"
+							target="FrameMain">
+								Introducci&oacute;n</a>
+
+				</li><li class="folder" id="RequisitosdeInstalacion" data="">
+							<a
+							href="RequisitosdeInstalacion.html"
+							target="FrameMain">
+								Requisitos de Instalaci&oacute;n</a>
+
+				<ul><li class="" id="InstalarNETFramework35enWindows8" data="">
+							<a
+							href="InstalarNETFramework35enWindows8.html"
+							target="FrameMain">
+								Instalar .NET Framework 3.5 en Windows 8 u 8.1</a>
+
+				</li></ul></li><li class="folder" id="DatosMaestros" data="">
+							<a
+							href="DatosMaestros.html"
+							target="FrameMain">
+								Datos Maestros</a>
+
+				<ul><li class="" id="Consideracionesgeneralessobrelas" data="">
+							<a
+							href="Consideracionesgeneralessobrelas.html"
+							target="FrameMain">
+								Consideraciones generales sobre las ventanas</a>
+
+				</li><li class="folder" id="Clientes" data="">
+							<a
+							href="Clientes.html"
+							target="FrameMain">
+								Clientes</a>
+
+				<ul><li class="" id="Cliente" data="">
+							<a
+							href="Cliente.html"
+							target="FrameMain">
+								Cliente</a>
+
+				</li><li class="" id="Sector" data="">
+							<a
+							href="Sector.html"
+							target="FrameMain">
+								Sector</a>
+
+				</li><li class="" id="EstadodelCliente" data="">
+							<a
+							href="EstadodelCliente.html"
+							target="FrameMain">
+								Estado del Cliente</a>
+
+				</li><li class="" id="RecordCliente" data="">
+							<a
+							href="RecordCliente.html"
+							target="FrameMain">
+								Record Cliente</a>
+
+				</li><li class="" id="TipodeDocumento" data="">
+							<a
+							href="TipodeDocumento.html"
+							target="FrameMain">
+								Tipo de Documento</a>
+
+				</li></ul></li><li class="folder" id="Proveedores" data="">
+							<a
+							href="Proveedores.html"
+							target="FrameMain">
+								Proveedores</a>
+
+				<ul><li class="" id="Proveedores1" data="">
+							<a
+							href="Proveedores1.html"
+							target="FrameMain">
+								Proveedores</a>
+
+				</li></ul></li><li class="folder" id="Transacciones" data="">
+							<a
+							href="Transacciones.html"
+							target="FrameMain">
+								Transacciones</a>
+
+				<ul><li class="" id="Periodo" data="">
+							<a
+							href="Periodo.html"
+							target="FrameMain">
+								Periodo</a>
+
+				</li><li class="" id="TiposdeAjuste" data="">
+							<a
+							href="TiposdeAjuste.html"
+							target="FrameMain">
+								Tipos de Ajuste</a>
+
+				</li><li class="" id="FormasdePago" data="">
+							<a
+							href="FormasdePago.html"
+							target="FrameMain">
+								Formas de Pago</a>
+
+				</li></ul></li><li class="folder" id="Empresas" data="">
+							<a
+							href="Empresas.html"
+							target="FrameMain">
+								Empresas</a>
+
+				<ul><li class="" id="Empresa" data="">
+							<a
+							href="Empresa.html"
+							target="FrameMain">
+								Empresa</a>
+
+				</li><li class="" id="AnimaciondeCrearEmpresa" data="">
+							<a
+							href="AnimaciondeCrearEmpresa.html"
+							target="FrameMain">
+								Animaci&oacute;n de Crear Empresa</a>
+
+				</li></ul></li><li class="folder" id="Productos" data="">
+							<a
+							href="Productos.html"
+							target="FrameMain">
+								Productos</a>
+
+				<ul><li class="" id="Forma" data="">
+							<a
+							href="Forma.html"
+							target="FrameMain">
+								Forma</a>
+
+				</li><li class="" id="Fabricante" data="">
+							<a
+							href="Fabricante.html"
+							target="FrameMain">
+								Fabricante</a>
+
+				</li><li class="" id="Presentacion" data="">
+							<a
+							href="Presentacion.html"
+							target="FrameMain">
+								Presentacion</a>
+
+				</li><li class="" id="UnidaddeMedida" data="">
+							<a
+							href="UnidaddeMedida.html"
+							target="FrameMain">
+								Unidad de Medida</a>
+
+				</li><li class="" id="TipoProducto" data="">
+							<a
+							href="TipoProducto.html"
+							target="FrameMain">
+								Tipo Producto</a>
+
+				</li><li class="" id="Producto" data="">
+							<a
+							href="Producto.html"
+							target="FrameMain">
+								Producto</a>
+
+				</li><li class="folder" id="ActualizacionRapidadeExistencias" data="">
+							<a
+							href="ActualizacionRapidadeExistencias.html"
+							target="FrameMain">
+								Actualizaci&oacute;n R&aacute;pida de Existencias</a>
+
+				<ul><li class="" id="AnimaciondeModificacionRapidadeP" data="">
+							<a
+							href="AnimaciondeModificacionRapidadeP.html"
+							target="FrameMain">
+								Animaci&oacute;n de Modificaci&oacute;n R&aacute;pida de Precios</a>
+
+				</li></ul></li><li class="" id="Componente" data="">
+							<a
+							href="Componente.html"
+							target="FrameMain">
+								Componente</a>
+
+				</li></ul></li></ul></li><li class="folder" id="Transacciones1" data="">
+							<a
+							href="Transacciones1.html"
+							target="FrameMain">
+								Transacciones</a>
+
+				<ul><li class="folder" id="Compras" data="">
+							<a
+							href="Compras.html"
+							target="FrameMain">
+								Compras</a>
+
+				<ul><li class="" id="ConsultarCompras" data="">
+							<a
+							href="ConsultarCompras.html"
+							target="FrameMain">
+								Consultar Compras</a>
+
+				</li><li class="" id="AnularCompras" data="">
+							<a
+							href="AnularCompras.html"
+							target="FrameMain">
+								Anular Compras</a>
+
+				</li></ul></li><li class="folder" id="Facturas" data="">
+							<a
+							href="Facturas.html"
+							target="FrameMain">
+								Facturas</a>
+
+				<ul><li class="" id="ConsultarFacturas" data="">
+							<a
+							href="ConsultarFacturas.html"
+							target="FrameMain">
+								Consultar Facturas</a>
+
+				</li><li class="" id="AnularFacturas" data="">
+							<a
+							href="AnularFacturas.html"
+							target="FrameMain">
+								Anular Facturas</a>
+
+				</li></ul></li><li class="folder" id="Ajustes" data="">
+							<a
+							href="Ajustes.html"
+							target="FrameMain">
+								Ajustes</a>
+
+				<ul><li class="" id="ConsultarAjustes" data="">
+							<a
+							href="ConsultarAjustes.html"
+							target="FrameMain">
+								Consultar Ajustes</a>
+
+				</li><li class="" id="AnularAjustes" data="">
+							<a
+							href="AnularAjustes.html"
+							target="FrameMain">
+								Anular Ajustes</a>
+
+				</li></ul></li><li class="folder" id="Inventarios" data="">
+							<a
+							href="Inventarios.html"
+							target="FrameMain">
+								Inventarios</a>
+
+				<ul><li class="" id="ConsultarInventarios" data="">
+							<a
+							href="ConsultarInventarios.html"
+							target="FrameMain">
+								Consultar Inventarios</a>
+
+				</li><li class="" id="AnularInventarios" data="">
+							<a
+							href="AnularInventarios.html"
+							target="FrameMain">
+								Anular Inventarios</a>
+
+				</li></ul></li><li class="folder" id="NotasdeDebitoCredito" data="">
+							<a
+							href="NotasdeDebitoCredito.html"
+							target="FrameMain">
+								Notas de D&eacute;bito/Cr&eacute;dito</a>
+
+				<ul><li class="" id="ConsultarNotasdeDebitoCredito" data="">
+							<a
+							href="ConsultarNotasdeDebitoCredito.html"
+							target="FrameMain">
+								Consultar Notas de D&eacute;bito/Cr&eacute;dito</a>
+
+				</li><li class="" id="AnularNotasdeDebitoCredito" data="">
+							<a
+							href="AnularNotasdeDebitoCredito.html"
+							target="FrameMain">
+								Anular Notas de D&eacute;bito/Cr&eacute;dito</a>
+
+				</li></ul></li></ul></li></ul>
+		</div>
+		
+		<div id="tab-keywords">
+			<ul id="keywords">
+
+				</ul>
+		</div>
+		
+		<div id="tab-search">
+			<form onsubmit="PerformSearch(); return false;">
+				<label for="search_value">Search:</label>
+				<input id="search_value" name="search_value"></input>
+				<input type="submit" value="Search"/>
+			</form>
+			<div id="search_results"></div>
+		</div>
+		
+		</div>
+    
+</body>
+
+</html>
+
