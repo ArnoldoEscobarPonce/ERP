@@ -1,0 +1,640 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="HelpNDoc Personal Edition 7.0.0.199">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico"/>
+
+  <title>Cliente</title>
+  <meta name="description" content="" /> 
+  <meta name="keywords" content=",,">
+
+
+
+  
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cliente">
+  <meta name="twitter:description" content="">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Cliente" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Help" /> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendors/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="vendors/bootstrap-3.4.1/css/ie10-viewport-bug-workaround.css" rel="stylesheet"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="vendors/html5shiv-3.7.3/html5shiv.min.js"></script>
+      <script src="vendors/respond-1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- JsTree styles -->
+  <link href="vendors/jstree-3.3.10/themes/default/style.min.css" rel="stylesheet"/>
+
+  <!-- Hnd styles -->
+  <link href="css/layout.min.css" rel="stylesheet" />
+  <link href="css/effects.min.css" rel="stylesheet" />
+  <link href="css/theme-light-blue.min.css" rel="stylesheet" />
+  <link href="css/print.min.css" rel="stylesheet" media="print" />
+  <style type="text/css">nav { width: 350px} @media screen and (min-width:769px) { body.md-nav-expanded div#main { margin-left: 350px} body.md-nav-expanded header { padding-left: 364px} }</style>
+
+  <!-- Content style -->
+  <link href="css/hnd.content.css" rel="stylesheet" />
+
+  
+
+
+
+</head>
+
+<body class="md-nav-expanded">
+
+
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible">Skip to main content</a>
+  </div>
+
+  <header class="headroom">
+    <button class="hnd-toggle btn btn-default">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>        
+    </button>
+    <h1>Help</h1>
+    
+  </header>
+
+  <nav id="panel-left" class="md-nav-expanded">
+    <!-- Nav tabs -->
+    <ul class="tab-tabs nav nav-tabs" role="tablist">
+      <li id="nav-close"> 
+        <button class="hnd-toggle btn btn-default">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </li>
+      
+	  
+        <li role="presentation" class="tab active">
+            <a href="#contents" id="tab-contents" aria-controls="contents" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-list"></i>
+                Contents
+            </a>
+        </li>
+      
+        <li role="presentation" class="tab">
+            <a href="#index" id="tab-index" aria-controls="index" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-asterisk"></i>
+                Index
+            </a>
+        </li>
+      
+        <li role="presentation" class="tab">
+            <a href="#search" id="tab-search" aria-controls="search" role="tab" data-toggle="tab">
+                <i class="glyphicon glyphicon-search"></i>
+                Search
+            </a>
+        </li>
+      
+    </ul>  <!-- /Nav tabs -->
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+	  
+      <div role="tabpanel" class="tab-pane active" id="contents">
+        <div id="toc" class="tree-container unselectable"
+            data-url="_toc.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /contents-->
+      
+      <div role="tabpanel" class="tab-pane" id="index">
+        <div id="keywords" class="tree-container unselectable"
+            data-url="_keywords.json"
+            data-openlvl="1"
+        >
+            
+        </div>
+      </div>  <!-- /index-->
+      
+      <div role="tabpanel" class="tab-pane" id="search">
+        <div class="search-content">
+          <div class="search-input">
+            <form id="search-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="input-search" name="input-search" placeholder="Search..." />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>  <!-- /search-input -->
+          <div class="search-result">
+            <div id="search-info"></div>
+            <div class="tree-container unselectable" id="search-tree"></div>
+          </div>  <!-- /search-result -->
+        </div>  <!-- /search-content -->
+      </div>  <!-- /search-->
+      
+    </div>  <!-- /Tab panes -->
+
+  </nav>
+
+  <div id="main">
+
+    <article>
+        <div id="topic-content" class="container-fluid" 
+		  data-hnd-id="Cliente"
+		  data-hnd-context="3"
+		  data-hnd-title="Cliente"
+		>
+            
+                <div class="navigation">
+                    <ol class="breadcrumb">
+                        <li><a href="DatosMaestros.html">Datos Maestros</a></li><li><a href="Clientes.html">Clientes</a></li>
+                    </ol>
+                    <div class="nav-arrows">
+                        <div class="btn-group btn-group-xs" role="group"><a class="btn btn-default" href="Clientes.html" title="Clientes" role="button"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a><a class="btn btn-default" href="Clientes.html" title="Clientes" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><a class="btn btn-default" href="Sector.html" title="Sector" role="button"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></div>
+                    </div>
+                </div> 
+            
+
+            <a id="main-content"></a>
+
+            <h2>Cliente</h2>
+
+            <div class="main-content">
+                
+<p></p>
+<p class="rvps2"><span class="rvts11">Cliente</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">El sistema, en su modulo de facturación centra sus movimientos sobre los clientes, los clientes son las figuras sobre las cuales se generan las facturas, las notas de crédito, la notas de débito, reportes, estadísticas y en general la información de ventas.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Los Datos Maestros de los Clientes están agrupados en 3 grupos o pestañas: </span><span class="rvts32">Info. General, Referencias y Documentos</span><span class="rvts6">, la tercer pestaña no es mas que un listado de los clientes existentes en el sistema.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Ruta de acceso: </span><span class="rvts32">Menú Principal</span><span class="rvts6"> &lt;-- Pestaña </span><span class="rvts32">Catálogos</span><span class="rvts6"> &lt;-- Grupo </span><span class="rvts32">Clientes &lt;-- Cliente</span></p>
+<p class="rvps2"><span class="rvts32"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem90.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts32"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" style="padding : 1px;" src="lib/Table.png"><span class="rvts6">La información básica para cada registro en el grupo de </span><span class="rvts32">Info. General </span><span class="rvts6">consiste en:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Nombre Campo</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tipo de Dato</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tamaño</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Nombre</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">255</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Dirección</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">255</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">NIT</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">255</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">DPI</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">50</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6"># Contador (Numero Contador)</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">50</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Teléfono 1</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">25</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Teléfono 2</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">25</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Sector</span></p>
+  </td>
+  <td colspan="2" width="325" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><a class="rvts33" href="Sector.html">Ver Sector</a></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Estado</span></p>
+  </td>
+  <td colspan="2" width="325" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><a class="rvts33" href="EstadodelCliente.html">Ver Estado</a></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Record</span></p>
+  </td>
+  <td colspan="2" width="325" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><a class="rvts33" href="RecordCliente.html">Ver Record</a></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="204" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Fotografía</span></p>
+  </td>
+  <td width="104" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Imagen</span></p>
+  </td>
+  <td width="214" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><a class="rvts33" href="ConfiguracionesGenerales1.html">Ver Configuraciones Generales</a></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts32"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem176.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Crédito (Limites)</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Los limites de crédito nos dan un método para establecer un tope razonable y seguro en la cantidad de deuda/crédito que un cliente puede acumular.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">De forma predeterminada cada Cliente nuevo se crea con 0 (Cero) en cada Limite, de este modo no se permitirá usar en una transacción al crédito.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts32">Tipos de limite permitido</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts32">Limite Diario:</span><span class="rvts6"> Limite de compras al Crédito por Día.</span></p>
+<p class="rvps2"><span class="rvts32">Limite Mensual:</span><span class="rvts6"> Limite de compras al Crédito al Mes, esto incluye las del día y por lo tanto debe ser mayor al Limite Diario.</span></p>
+<p class="rvps2"><span class="rvts32">Limite Total:</span><span class="rvts6"> Limite de compras al Crédito Total, esto incluye las del día y las del mes, por lo tanto este limite debe ser mayor que los 2 anteriores.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" style="padding : 1px;" src="lib/Table.png"><span class="rvts6">La estructura de la información del grupo de datos de Limite de Crédito</span><span class="rvts32"> </span><span class="rvts6">consiste en:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+ <tr valign="top">
+  <td width="126" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Nombre Campo</span></p>
+  </td>
+  <td width="117" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tipo de Dato</span></p>
+  </td>
+  <td width="99" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tamaño</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="126" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Diario</span></p>
+  </td>
+  <td width="117" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Numérico&nbsp;</span></p>
+  </td>
+  <td width="99" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">(18,2)</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="126" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Mensual</span></p>
+  </td>
+  <td width="117" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Numérico</span></p>
+  </td>
+  <td width="99" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">(18,2)</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="126" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Total</span></p>
+  </td>
+  <td width="117" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Numérico</span></p>
+  </td>
+  <td width="99" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">(18,2)</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts32">Nota</span><span class="rvts6">: La deuda o crédito actual en un momento dado es el balance de débitos (Facturas al Crédito, Notas de Débito) y Créditos (Notas de Crédito), esto quiere decir que el limite esta en constante cambio, una Nota de Crédito a favor puede habilitar a un cliente para que pueda volver a facturar.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Ver </span><a class="rvts33" href="Facturas.html">Factura</a></p>
+<p class="rvps2"><span class="rvts6">Ver </span><a class="rvts33" href="NotasdeDebitoCredito.html">Notas de Débito/Crédito</a></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem180.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts32">Advertencia de Limite de Crédito</span></p>
+<p class="rvps2"><span class="rvts32"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Tanto en las Facturas al Crédito como en las Notas de Débito es verificado el Limite de Crédito, si el valor de la Factura/Nota actual mas el total del crédito anterior acumulado excede algún Limite establecido (Diario, Mensual o Total), un mensaje de alerta sera mostrado, en el puede aparecer uno, dos o los tres mensajes en donde indica que limite esta apunto de ser sobrepasado, esto evitara que el documento al crédito sea generado.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem181.png"></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Referencias</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">En los sistemas que están configurados para empresas que tienen ventas al crédito, o que llevan una cartera de Clientes completa el sistema les permite ingresar ilimitadas referencias personales.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts32">Definición</span><span class="rvts6">: Una referencia personal se considera como una persona que puede dar información o fe del Crédito de un Cliente, también podría ser considerado en ciertas ocasiones como la única forma de contactar un cliente cuando este no tiene una dirección exacta.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" style="padding : 1px;" src="lib/Table.png"><span class="rvts6">La información básica para cada registro en el grupo de </span><span class="rvts32">Referencias </span><span class="rvts6">consiste en:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+ <tr valign="top">
+  <td width="127" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Nombre Campo</span></p>
+  </td>
+  <td width="102" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tipo de Dato</span></p>
+  </td>
+  <td width="93" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tamaño</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="127" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Nombre</span></p>
+  </td>
+  <td width="102" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="93" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">255</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="127" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Dirección</span></p>
+  </td>
+  <td width="102" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="93" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">255</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="127" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">NIT</span></p>
+  </td>
+  <td width="102" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="93" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">50</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="127" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">DPI</span></p>
+  </td>
+  <td width="102" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="93" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">50</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="127" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Teléfono</span></p>
+  </td>
+  <td width="102" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="93" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">25</span></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem177.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Documentos</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts6">En los sistemas que están configurados para empresas que tienen ventas al crédito, o que llevan una cartera de Clientes completa el sistema les permite ingresar ilimitadas Documentos Digitales.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Estos documentos pueden representar </span><span class="rvts32">documentos de identificación</span><span class="rvts6">, </span><span class="rvts32">licencias de conducir</span><span class="rvts6">, </span><span class="rvts32">constancias de ingresos</span><span class="rvts6"> y cualquier documento que a la empresa le sirva para verificar la identidad de un cliente.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img width="25" height="25" alt="" style="padding : 1px;" src="lib/Table.png"><span class="rvts6">La información básica para cada registro en el grupo de </span><span class="rvts32">Documentos </span><span class="rvts6">consiste en:</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<div class="rvps2">
+<table border="1" cellpadding="1" cellspacing="-1" style="border-width: 0px; border-collapse: collapse;">
+ <tr valign="top">
+  <td width="128" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Nombre Campo</span></p>
+  </td>
+  <td width="114" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tipo de Dato</span></p>
+  </td>
+  <td width="208" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps16"><span class="rvts32">Tamaño</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="128" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Archivo</span></p>
+  </td>
+  <td width="114" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Archivo Binario</span></p>
+  </td>
+  <td width="208" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><a class="rvts33" href="ConfiguracionesGenerales1.html">Ver Configuraciones Generales</a></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="128" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Observaciones</span></p>
+  </td>
+  <td width="114" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="208" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Ilimitado</span></p>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td width="128" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Tipo de Documento</span></p>
+  </td>
+  <td width="114" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><span class="rvts6">Texto</span></p>
+  </td>
+  <td width="208" style="border-width : 1px; border-color: #000000; border-style: solid; padding: 1px;">
+   <p class="rvps2"><a class="rvts33" href="TipodeDocumento.html">Ver Cliente</a></p>
+  </td>
+ </tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem178.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Finalmente, en la pestaña/grupo Lista de Clientes se listan los Clientes existentes, estos pueden ser editados dando doble clic sobre ellos.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem179.png"></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts11">Ingreso rápido de Clientes</span></p>
+<hr style="height: 1px; color : #000000;  background-color : #000000; border-width : 0px;">
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><span class="rvts6">Adicional al mantenimiento normal de los clientes, existe un método abreviado de ingreso de clientes, este es usado unicamente desde el ingreso de facturas de ventas, desde este ingreso es obligatorio unicamente el Nombre y NIT del cliente, si un cliente ingresado de esta forma es consultado desde el mantenimiento normal de clientes sera exigida la dirección completando así la información obligatoria.</span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p class="rvps2"><img alt="" style="padding : 1px;" src="lib/NewItem106.png"></p>
+<p class="rvps2"><span class="rvts11"><br/></span></p>
+<p class="rvps2"><span class="rvts6"><br/></span></p>
+<p></p>
+<p class="rvps5" style="clear: both;"><span class="rvts15">Creado con el Personal Edition de HelpNDoc: </span><a class="rvts16" href="https://www.helpndoc.com/es/descubrir-funciones/">Crear fácilmente libros de EPub</a></p>
+
+            </div>
+            
+            <div id="topic_footer"><div id="topic_footer_content">Copyright &copy; 2015 by Arnoldo Escobar. All Rights Reserved.</div></div>
+        </div>  <!-- /#topic-content -->
+    </article>
+
+    <footer></footer>
+
+  </div>  <!-- /#main -->
+
+  <div class="mask" data-toggle="sm-nav-expanded"></div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="hndModal" tabindex="-1" role="dialog" aria-labelledby="hndModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="hndModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary modal-btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Splitter -->
+  <div id="hnd-splitter" style="left: 350px"></div>  
+
+  <!-- Scripts -->
+  <script src="vendors/jquery-3.5.1/jquery.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+  <script src="vendors/bootstrap-3.4.1/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="vendors/markjs-8.11.1/jquery.mark.min.js"></script>
+  <script src="vendors/uri-1.19.2/uri.min.js"></script>
+  <script src="vendors/imageMapResizer-1.0.10/imageMapResizer.min.js"></script>
+  <script src="vendors/headroom-0.11.0/headroom.min.js"></script>
+  <script src="vendors/jstree-3.3.10/jstree.min.js"></script>  
+  <script src="vendors/interactjs-1.9.22/interact.min.js"></script>  
+
+  <!-- HelpNDoc scripts -->
+  <script src="js/polyfill.object.min.js"></script>
+  <script src="_translations.js"></script>
+  <script src="js/hndsd.min.js"></script>
+  <script src="js/hndse.min.js"></script>
+  <script src="js/app.min.js"></script>
+
+  <!-- Init script -->
+  <script>
+    $(function() {
+      // Create the app
+      var app = new Hnd.App();
+      // Update translations
+      hnd_ut(app);
+	  // Instanciate imageMapResizer
+	  imageMapResize();
+	  // Custom JS
+	  
+      // Boot the app
+      app.Boot();
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+
