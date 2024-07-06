@@ -99,122 +99,38 @@ a.rvts16, span.rvts16 /* Font Style */
 }
 span.rvts17
 {
- font-size: 12pt;
- font-family: 'Times New Roman', 'Times', serif;
- color: #000000;
-}
-a.rvts18, span.rvts18
-{
- font-size: 12pt;
- font-family: 'Times New Roman', 'Times', serif;
- color: #0000ff;
- text-decoration: underline;
-}
-span.rvts19
-{
- font-size: 30pt;
- font-family: 'segoe ui';
- color: #000000;
-}
-span.rvts20
-{
- font-size: 9pt;
- font-family: 'segoe ui';
- color: #2a2a2a;
-}
-span.rvts21
-{
- font-size: 15pt;
- font-family: 'Times New Roman', 'Times', serif;
- font-weight: bold;
- color: #636363;
-}
-span.rvts22
-{
- font-size: 15pt;
- font-family: 'Times New Roman', 'Times', serif;
- color: #2a2a2a;
-}
-a.rvts23, span.rvts23
-{
- font-size: 14pt;
- font-family: 'segoe ui';
- color: #0000ff;
- text-decoration: none;
-}
-span.rvts24
-{
- font-size: 9pt;
- font-family: 'segoe ui';
- font-weight: bold;
- color: #2a2a2a;
-}
-span.rvts25
-{
- font-size: 9pt;
- font-family: 'segoe ui';
- color: #000000;
-}
-span.rvts26
-{
- font-size: 11pt;
- font-family: 'segoe ui';
- color: #000000;
-}
-span.rvts27
-{
- font-size: 14pt;
- font-family: 'segoe ui';
- color: #000000;
-}
-span.rvts28
-{
- font-size: 8pt;
- font-family: 'consolas';
- color: #006400;
- background-color: #ffff00;
-}
-span.rvts29
-{
- font-size: 14pt;
- font-family: 'consolas';
- font-weight: bold;
- color: #ff0000;
-}
-span.rvts30
-{
- font-size: 9pt;
- font-family: 'consolas';
- color: #006400;
-}
-a.rvts31, span.rvts31
-{
- font-size: 9pt;
- font-family: 'segoe ui';
- color: #03697a;
- text-decoration: underline;
-}
-span.rvts32
-{
  font-size: 14pt;
  font-family: 'Times New Roman', 'Times', serif;
  color: #333333;
 }
-span.rvts33
+span.rvts18
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
+span.rvts19
 {
  font-size: 12pt;
  font-family: 'Times New Roman', 'Times', serif;
  font-weight: bold;
  color: #000000;
 }
-span.rvts34
+a.rvts20, span.rvts20
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts21
 {
  font-size: 12pt;
  font-family: 'Tahoma', 'Geneva', sans-serif;
  font-style: italic;
  color: #c0c0c0;
 }
-span.rvts35
+span.rvts22
 {
  font-size: 12pt;
  font-family: 'Times New Roman', 'Times', serif;
@@ -222,7 +138,7 @@ span.rvts35
  font-weight: bold;
  color: #000000;
 }
-a.rvts36, span.rvts36
+a.rvts23, span.rvts23
 {
  font-size: 12pt;
  font-family: 'Times New Roman', 'Times', serif;
@@ -230,15 +146,41 @@ a.rvts36, span.rvts36
  color: #0000ff;
  text-decoration: underline;
 }
-a.rvts37, span.rvts37
+a.rvts24, span.rvts24
 {
  font-size: 12pt;
  font-family: 'Times New Roman', 'Times', serif;
  color: #333333;
  text-decoration: none;
 }
-a.rvts37:hover { text-decoration: underline; }
-span.rvts38
+a.rvts24:hover { text-decoration: underline; }
+span.rvts25
+{
+ font-size: 13pt;
+ font-weight: bold;
+}
+span.rvts26
+{
+ font-weight: bold;
+}
+span.rvts27
+{
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #000000;
+}
+span.rvts28
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts29, span.rvts29
+{
+ font-size: 11pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts30
 {
  font-size: 8pt;
  font-family: 'Times New Roman', 'Times', serif;
@@ -268,7 +210,16 @@ p,ul,ol /* Paragraph Style */
  background: #000000;
  margin: 10px 0px 10px 0px;
 }
-.rvps5 /* Paragraph Style */
+.rvps5
+{
+ text-indent: 48px;
+ margin: 0px 0px 0px 24px;
+}
+.rvps6
+{
+ margin: 0px 0px 0px 24px;
+}
+.rvps7 /* Paragraph Style */
 {
  text-align: center;
  border-color: #c0c0c0;
@@ -279,44 +230,11 @@ p,ul,ol /* Paragraph Style */
  padding: 2px 0px 2px 0px;
  margin: 7px 0px 7px 0px;
 }
-.rvps6
+.rvps8
 {
  text-indent: 48px;
 }
-.rvps7
-{
- text-align: left;
- text-indent: 0px;
- padding: 0px 0px 0px 0px;
- margin: 0px 0px 7px 0px;
-}
-.rvps8
-{
- margin: 13px 0px 0px 0px;
-}
 .rvps9
-{
- margin: 0px 0px 0px 48px;
-}
-.rvps10
-{
- text-align: left;
- text-indent: 0px;
- padding: 0px 0px 0px 0px;
- margin: 0px 0px 0px 0px;
-}
-.rvps11
-{
- text-align: left;
- text-indent: 0px;
- padding: 0px 0px 0px 0px;
- margin: 0px 0px 0px 0px;
-}
-.rvps12
-{
- margin: 0px 0px 0px 96px;
-}
-.rvps13
 {
  text-align: left;
  text-indent: 0px;
@@ -330,12 +248,12 @@ p,ul,ol /* Paragraph Style */
  padding: 9px 9px 9px 9px;
  margin: 0px 0px 0px 0px;
 }
-.rvps14
+.rvps10
 {
  background: #ffffff;
  padding: 9px 9px 9px 9px;
 }
-.rvps15
+.rvps11
 {
  background: #bfbfbf;
 }
@@ -343,13 +261,9 @@ p,ul,ol /* Paragraph Style */
 .list0 {text-indent: 0px; margin-left: 33px; list-style-position: outside; list-style-type: disc;}
 .list1 {text-indent: 0px; margin-left: 48px; list-style-position: outside; list-style-type: circle;}
 .list2 {text-indent: 0px; margin-left: 48px; list-style-position: outside; list-style-type: square;}
-.list3 {text-indent: 0px; margin-left: 33px; list-style-position: outside; list-style-type: circle;}
-.list4 {text-indent: 0px; margin-left: 33px; list-style-position: outside; list-style-type: square;}
-.list5 {text-indent: 0px; margin-left: 57px; list-style-position: outside; list-style-type: disc;}
-.list6 {text-indent: 0px; margin-left: 57px; list-style-position: outside; list-style-type: circle;}
-.list7 {text-indent: 0px; margin-left: 57px; list-style-position: outside; list-style-type: square;}
-.list8 {text-indent: 0px; margin-left: 57px; list-style-position: outside; list-style-type: decimal;}
-.list9 {text-indent: 0px; margin-left: 0px; list-style-position: inside; list-style-type: disc;}
-.list10 {text-indent: 0px; margin-left: 105px; list-style-position: outside; list-style-type: decimal;}
-.list11 {text-indent: 0px; margin-left: 105px; list-style-position: outside; list-style-type: square;}
-.list12 {text-indent: 0px; margin-left: 153px; list-style-position: outside; list-style-type: square;}
+.list3 {text-indent: 0px; margin-left: 24px; list-style-position: outside; list-style-type: disc;}
+.list4 {text-indent: 0px; margin-left: 48px; list-style-position: outside; list-style-type: disc;}
+.list5 {text-indent: 0px; margin-left: 33px; list-style-position: outside; list-style-type: circle;}
+.list6 {text-indent: 0px; margin-left: 33px; list-style-position: outside; list-style-type: square;}
+.list7 {text-indent: 0px; margin-left: 24px; list-style-position: outside; list-style-type: decimal;}
+.list8 {text-indent: 0px; margin-left: 48px; list-style-position: outside; list-style-type: decimal;}
