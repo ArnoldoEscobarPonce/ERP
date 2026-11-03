@@ -53,6 +53,8 @@
 <!-- FIN-PWA -->
 
 
+
+
 <style>
   :root{
     --bg:#f6f3ec; --panel:#fffdf8; --texto:#241f19; --suave:#6d6459; --linea:#e6dfd2;
@@ -84,7 +86,8 @@
   .marca-txt{display:flex;flex-direction:column;min-width:0}
   .marca-txt b{font-size:.95rem;letter-spacing:.2px;white-space:nowrap}
   .marca-txt small{font-size:.72rem;color:var(--suave);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .tools{display:flex;align-items:center;gap:6px;flex-wrap:nowrap}
+  .tools{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end;min-width:0}
+  .tools > *{flex:0 0 auto}   /* ningún control se comprime: si no cabe, salta a la línea siguiente */
   .grupo-fuente{display:flex;align-items:center;gap:2px;background:var(--bg);border:1px solid var(--linea);border-radius:999px;padding:2px}
   .pct{font-size:.7rem;color:var(--suave);min-width:44px;text-align:center;font-variant-numeric:tabular-nums}
   .btn{
@@ -102,7 +105,10 @@
   .btn.primario:hover{filter:brightness(1.06);background:var(--acento)}
   .btn.peligro:hover{background:#f7dcdc;border-color:#c2453f;color:#8e211d}
   [data-theme="oscuro"] .btn.peligro:hover{background:#3a1c1b;color:#ffb3ad}
-  .btn.flecha{font-size:1.35rem;line-height:1;padding:2px 12px 6px}
+  /* flechas de himno anterior/siguiente: el glifo se centraba a ojo (padding 2/6 px)
+     y cada fuente lo dibuja distinto, así que ahora es un chevrón SVG centrado */
+  .btn.flecha{line-height:1;padding:0;min-width:34px;min-height:32px;justify-content:center;align-items:center}
+  .btn.flecha svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
   .linkbtn{color:var(--acento);text-decoration:underline;text-underline-offset:2px;font-size:.8rem;padding:2px 0}
   .linkbtn:hover{filter:brightness(1.15)}
 
@@ -287,13 +293,30 @@
   #toast.on{opacity:1;transform:translate(-50%,0)}
 
   /* ── responsivo ── */
+  /* pantallas táctiles (teléfonos y tabletas): área de toque de 40-44 px,
+     antes los botones hacían 30 px de alto y costaba acertar */
+  @media (max-width:900px){
+    .btn{min-height:40px;padding:8px 12px;font-size:.88rem}
+    .btn.icono{min-width:40px;justify-content:center}
+    .tools .btn{min-height:40px;min-width:42px;justify-content:center;padding:0 12px;font-size:1.12rem}
+    .grupo-fuente{padding:3px;gap:2px}
+    .grupo-fuente .btn.mini{min-width:40px;min-height:38px;padding:0 6px;font-size:1.02rem;font-weight:600}
+    .pct{min-width:46px;font-size:.74rem}
+    .flechas .btn{min-height:44px;min-width:44px;padding:0}
+    .estrellas button{min-width:34px;min-height:40px;padding:0;font-size:1.4rem}
+    .nav-himno input{min-height:42px;font-size:1rem}
+    .buscar input{min-height:42px;font-size:1rem}
+    .buscar .limpiar{min-width:34px;min-height:34px;font-size:.95rem}
+    .tools .lbl{display:none}   /* con etiquetas la barra no cabe en una línea */
+  }
   @media (max-width:720px){
+    header.top{flex-wrap:wrap;gap:8px 10px;padding:7px 10px}
+    .marca{flex:0 0 auto;align-self:flex-start;padding-top:13px;gap:7px}   /* el logo queda alineado con la primera línea de botones */
     .marca-txt small{display:none}
+    /* la barra envuelve en vez de recortarse: nada queda fuera de alcance */
+    .tools{flex:1 1 0;flex-wrap:wrap;justify-content:flex-end;row-gap:6px;column-gap:6px;overflow:visible}
     .tools .lbl{display:none}
-    .tools .btn{padding:6px 8px}
-    .tools{min-width:0;flex:1 1 auto;justify-content:flex-end;overflow-x:auto;scrollbar-width:none}
-    .tools::-webkit-scrollbar{display:none}
-    .pct{min-width:38px;font-size:.66rem}
+    .nav-himno input{width:84px}
     main{padding:16px 12px 32px}
     .cabecera-himno{gap:10px}
     .num{min-width:46px;height:46px;font-size:1.1rem;border-radius:12px}
@@ -301,10 +324,28 @@
     .nav-himno .btn{flex:1 1 auto;justify-content:center}
     .nav-himno .ir{order:3;flex:1 1 100%;justify-content:center}
   }
-  @media (max-width:380px){
-    .marca-txt b{font-size:.85rem}
-    .grupo-fuente .btn.mini{padding:3px 5px}
-    .pct{display:none}
+  @media (max-width:560px){
+    /* en el teléfono queda solo el logo: el título ocupaba la mitad de la barra */
+    .marca-txt{display:none}
+    .tools{justify-content:flex-start}
+    /* orden pensado para dos líneas: letra · índice · tema / puntuados · cantos · importar · instalar */
+    .grupo-fuente{order:1}
+    #btnIndice{order:2}
+    #btnTema{order:3}
+    #btnPuntuados{order:4}
+    #btnArchivo{order:5}
+    #btnImportar{order:6}
+    #btnInstalar{order:7}
+  }
+  @media (max-width:400px){
+    /* pantallas muy estrechas: sin logo, así la barra se queda en dos líneas */
+    .marca{display:none}
+    .tools{flex:1 1 100%}
+  }
+  @media (max-width:340px){
+    .tools .btn{min-width:40px;padding:0 9px}
+    .grupo-fuente .btn.mini{min-width:36px}
+    .pct{min-width:42px;font-size:.7rem}
   }
   @media print{
     header.top,.ayuda-resalte,.nav-himno,.indice,.velo,.flechas{display:none!important}
@@ -371,8 +412,8 @@
       </div>
       <div class="flechas">
         <button class="btn icono" id="btnEditarHimno" title="Editar o eliminar este himno" aria-label="Editar este himno">✎</button>
-        <button class="btn flecha" id="btnPrev" title="Himno anterior (←)" aria-label="Himno anterior">‹</button>
-        <button class="btn flecha" id="btnNext" title="Himno siguiente (→)" aria-label="Himno siguiente">›</button>
+        <button class="btn flecha" id="btnPrev" title="Himno anterior (←)" aria-label="Himno anterior"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 5 8.5 12l7 7"/></svg></button>
+        <button class="btn flecha" id="btnNext" title="Himno siguiente (→)" aria-label="Himno siguiente"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8.5 5l7 7-7 7"/></svg></button>
       </div>
     </div>
     <div class="ayuda-resalte">
